@@ -1,0 +1,55 @@
+/* Variables de color */
+:root {
+  --black: #000;
+  --gold: #FFC107;
+  --dark-gray: #333;
+  --light-gray: #666;
+}
+
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; color: var(--black); line-height:1.6; }
+
+/* Header */
+header { display:flex; justify-content:space-between; align-items:center; padding:20px; position:relative; transition: background .3s; }
+header.scrolled { position:fixed; top:0; width:100%; background: var(--black); }
+.logo { width: 140px; transition: width .3s; }
+header.scrolled .logo { width:100px; }
+
+/* Quick nav buttons */
+.quick-nav .btn { background: var(--gold); color: var(--black); padding:10px 15px; border-radius:5px; margin-left:10px; text-decoration:none; }
+
+/* Hero */
+.hero { background:url('../images/hero-auto.jpg') center/cover no-repeat; min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; color:#fff; }
+.hero::after { content:''; position:absolute; inset:0; background: rgba(0,0,0,0.6); }
+.hero-content { position:relative; max-width:800px; padding:20px; }
+.hero .slogan { font-size:1.5rem; color: var(--gold); margin-bottom:10px; }
+.hero h1 { font-size:3rem; margin-bottom:10px; }
+.hero p { margin-bottom:15px; }
+.hero-buttons .btn { margin:0 10px; }
+.hero-buttons .outline { background: transparent; border:2px solid var(--gold); color: var(--gold); }
+
+/* Sections */
+.section { padding:60px 20px; max-width:1000px; margin:0 auto; }
+.section h2 { text-align:center; margin-bottom:20px; color: var(--dark-gray); }
+
+/* Cards */
+.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+.card { background: var(--light-gray); padding:20px; border-radius:8px; }
+.card h3 { margin-bottom:10px; color: var(--black); }
+
+/* Form */
+#contact-form { display:grid; gap:15px; max-width:500px; margin:0 auto; }
+#contact-form label { display:block; }
+#contact-form input, #contact-form select, #contact-form textarea { width:100%; padding:10px; border:1px solid var(--dark-gray); border-radius:4px; }
+#contact-form .btn { background: var(--gold); color: var(--black); border:none; padding:10px; cursor:pointer; }
+
+/* Footer */
+.footer { background: var(--dark-gray); color:#fff; padding:40px 20px; }
+.footer-columns { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
+.footer-columns a { color: var(--gold); text-decoration:none; }
+.footer-copy { text-align:center; margin-top:20px; color: var(--gold); }
+
+/* Scroll reveal */
+.fade-in { opacity:0; transform: translateY(20px); transition: opacity .8s ease-out, transform .8s ease-out; }
+.fade-in.visible { opacity:1; transform: translateY(0); }
