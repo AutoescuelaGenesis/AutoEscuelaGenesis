@@ -1,0 +1,1 @@
+// Lógica futura para scroll, animaciones u otros comportamientos.
