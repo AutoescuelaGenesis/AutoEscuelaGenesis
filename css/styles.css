@@ -1,0 +1,160 @@
+/* Root variables */
+:root {
+  --color-primary: #FFD700; /* Amarillo dorado */
+  --color-background: #000000; /* Fondo negro */
+  --color-secondary: #333333; /* Gris oscuro */
+  --font-family: 'Montserrat', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-background);
+  color: #FFFFFF;
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+  padding: 1rem;
+  text-align: center;
+  transition: padding 0.3s ease;
+  z-index: 1000;
+}
+.hero.shrink {
+  padding: 0.5rem;
+}
+.hero .logo {
+  max-width: 150px;
+  transition: max-width 0.3s ease;
+}
+.hero.shrink .logo {
+  max-width: 80px;
+}
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+.hero-text {
+  margin: 0.5rem auto;
+  max-width: 600px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #000000;
+}
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+  padding: 2rem 1rem;
+}
+.feature {
+  flex: 1 1 200px;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* Courses */
+.courses ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* About */
+.about {
+  background-color: var(--color-secondary);
+  padding: 2rem 1rem;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 2rem 1rem;
+}
+.testimonials h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.testimonial {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: var(--color-secondary);
+  padding: 2rem 1rem;
+}
+.contact-form form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+/* FAQ */
+.faq details {
+  background-color: #222;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-secondary);
+  padding: 2rem 1rem;
+}
+.footer h3 {
+  margin-bottom: 0.5rem;
+}
+.footer nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
