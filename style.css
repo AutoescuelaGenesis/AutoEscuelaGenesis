@@ -54,3 +54,13 @@
   object-fit: cover;          /\* recorta para llenar *\/
 }
 */
+.redes-sociales a {
+  color: #d4af37; /* Cambiá el color al que vos quieras */
+  text-decoration: none; /* Quita el subrayado si querés */
+  margin: 0 5px; /* Espaciado entre enlaces */
+  font-weight: bold;
+}
+
+.redes-sociales a:hover {
+  color: #fff; /* Cambia de color al pasar el mouse */
+}
