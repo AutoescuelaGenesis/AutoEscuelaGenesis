@@ -1,0 +1,56 @@
+/* Estilos externos para ajustar tamaño, centrado y adaptabilidad de las diapositivas */
+
+/* Contenedor de cada slide: centra y oculta desbordes */
+.slide {
+  display: flex;
+  align-items: center;        /* centra verticalmente */
+  justify-content: center;    /* centra horizontalmente */
+  overflow: hidden;           /* oculta lo que sobrepase */
+  background: #000;           /* fondo oscuro para letterboxing */
+}
+
+/* Ajuste de imágenes y vídeos */
+.slide img,
+.slide video {
+  max-width: 100%;            /* no se saldrá a los lados */
+  max-height: 500px;          /* altura máxima en escritorio */
+  width: auto;                /* mantiene proporción */
+  height: auto;               /* mantiene proporción */
+  object-fit: contain;        /* encaja dentro sin recortar */
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 1024px) {
+  .slide img,
+  .slide video {
+    max-height: 300px;
+  }
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+  .slide img,
+  .slide video {
+    max-height: 450px;
+  }
+}
+
+/* Opcional: si prefieres un ratio fijo 16:9, descomenta:
+.slide {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;        /\* 16:9 (9/16 = 0.5625) *\/
+  overflow: hidden;
+}
+
+.slide img,
+.slide video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+  object-fit: cover;          /\* recorta para llenar *\/
+}
+*/

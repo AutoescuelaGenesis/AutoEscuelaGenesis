@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autoescuela Genesis</title>
+  <!-- Font Awesome para iconos -->
+  <link rel="icon" href="assets/genesisf.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/genesisf.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6OeJ5W+UZ/OdbE8UgQ9eYDCY6/1uEISNf9ueZlHjG0+4QaY+6Ql7R5oz6akW0bL8ygxMVJu3Ug+X7J3vYwW9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --bg-color: #000;
+      --btn-color: #d4af37;
+      --btn-border: #333;
+      --text-color: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg-color); color: var(--text-color); font-family: Arial, sans-serif; line-height: 1.5; }
+    header { text-align: center; padding: 2rem 1rem; }
+    header img { max-width: 120px; }
+    header h1 { margin-top: 1rem; font-size: 2.5rem; letter-spacing: 2px; }
+    header p.lead { margin-top: 0.5rem; font-size: 1.2rem; }
+    .links { display: flex; flex-direction: column; gap: 1rem; padding: 1rem; max-width: 400px; margin: 0 auto; }
+    .links a.btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem; background: var(--btn-color); border: 2px solid var(--btn-border); border-radius: 0.5rem; color: var(--text-color); text-decoration: none; font-weight: bold; transition: transform 0.2s, filter 0.2s; }
+    .links a.btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+    .slider { position: relative; max-width: 800px; margin: 2rem auto; overflow: hidden; border-radius: 0.5rem; }
+    .slides { display: flex; transition: transform 0.5s ease-in-out; }
+    .slide { min-width: 100%; }
+    /*
+    .slide img, .slide video { width: 100%; display: block; }
+    */
+    .slider-nav { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); }
+    .slider-nav button { background: rgba(0,0,0,0.5); border: none; color: #fff; padding: 0.5rem 1rem; cursor: pointer; }
+    section { padding: 2rem 1rem; max-width: 800px; margin: 0 auto; }
+    section h2 { margin-bottom: 1rem; font-size: 1.75rem; border-bottom: 2px solid var(--btn-color); display: inline-block; padding-bottom: 0.5rem; }
+    .cards { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1rem; }
+    .card { background: #111; border: 1px solid var(--btn-border); padding: 1rem; border-radius: 0.5rem; }
+    .card h3 { margin-bottom: 0.5rem; }
+    .faq-item { margin-bottom: 1rem; background: #111; border-radius: 0.5rem; }
+    .faq-item summary { cursor: pointer; font-weight: bold; padding: 1rem; display: block; }
+    .faq-item p { padding: 0 1rem 1rem; }
+    .contact { background: #111; padding: 1rem; border-radius: 0.5rem; }
+    .contact p, .contact address { margin-bottom: 0.5rem; }
+    .btn-primary { display: inline-block; margin-top: 1rem; background: var(--btn-color); color: var(--text-color); padding: 0.75rem 1.5rem; border: 2px solid var(--btn-border); border-radius: 0.5rem; text-decoration: none; font-weight: bold; transition: transform 0.2s, filter 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+    @media(min-width: 600px) { .links { flex-direction: row; flex-wrap: wrap; } .links a.btn { flex: 1; } .cards { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.jpg" alt="Logo Autoescuela Genesis" />
+    <h1>GENESIS</h1>
+    <p class="lead">Mereces lo que sueñas.</p>
+    <p>Aprende a manejar con confianza<br>En Genesis te ofrecemos los mejores instructores y métodos de enseñanza para que obtengas tu licencia de manejo de forma rápida y segura.</p>
+  </header>
+
+  <div class="links">
+    <a href="https://wa.link/pmwpje" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://instagram.com/autoescuela.genesis" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.facebook.com/share/19Xczv72Rs/" class="btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://tiktok.com/@autoescuelagenesis" class="btn"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="https://goo.gl/maps/TU_UBICACION" class="btn"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+  </div>
+
+<div class="slider" id="slider">
+  <div class="slides">
+    <!-- Imágenes -->
+    <div class="slide"><img src="assets/foto1.jpg" alt="Foto 1"></div>
+    <div class="slide"><img src="assets/foto2.jpg" alt="Foto 2"></div>
+    <div class="slide"><img src="assets/foto3.jpg" alt="Foto 3"></div>
+    <!--
+    <div class="slide"><img src="assets/foto4.jpg" alt="Foto 4"></div>
+    -->
+    <div class="slide"><img src="assets/foto5.jpg" alt="Foto 5"></div>
+    <div class="slide"><img src="assets/foto6.jpg" alt="Foto 6"></div>
+    <!-- Vídeos -->
+    <!--
+    <div class="slide"><video src="assets/video1.mp4" controls></video></div>
+    <div class="slide"><video src="assets/video2.mp4" controls></video></div>
+    <div class="slide"><video src="assets/video3.mp4" controls></video></div>
+    <div class="slide"><video src="assets/video4.mp4" controls></video></div>
+    -->
+  </div>
+  <div class="slider-nav">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+</div>
+
+  <section id="destacados">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Instructores Certificados</h3>
+        <p>Nuestros instructores tienen años de experiencia y están certificados para brindarte la mejor enseñanza.</p>
+      </div>
+      <div class="card">
+        <h3>Vehículos</h3>
+        <p>Contamos con doble comando para mayor seguridad.</p>
+      </div>
+      <div class="card">
+        <h3>95% de Aprobación</h3>
+        <p>Nuestros estudiantes tienen una tasa de aprobación del 95% en el examen de manejo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cursos">
+    <h2>Nuestros Cursos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Curso Básico</h3>
+        <p>Ideal para principiantes que nunca han manejado un vehículo.</p>
+        <p>10 horas prácticas<br>Material didáctico</p>
+        <a href="#" class="btn-primary">Inscríbete</a>
+      </div>
+      <div class="card">
+        <h3>Curso Avanzado</h3>
+        <p>Para quienes ya tienen experiencia pero quieren perfeccionar sus habilidades.</p>
+        <p>6 horas prácticas<br>Manejo en avenida.</p>
+        <a href="#" class="btn-primary">Inscríbete</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-nosotros">
+    <h2>Sobre Genesis</h2>
+    <p>Genesis Escuela de Manejo fue fundada en 2010 con el objetivo de formar conductores responsables y seguros. Desde entonces, hemos graduado a más de 1000 estudiantes que hoy circulan con confianza por las calles de nuestra ciudad.</p>
+    <p>Nuestra filosofía se basa en tres pilares fundamentales: seguridad, responsabilidad y excelencia. Creemos que aprender a manejar es una habilidad para toda la vida que debe enseñarse con paciencia y profesionalismo.</p>
+  </section>
+
+  <section id="testimonios">
+    <h2>Testimonios de Nuestros Estudiantes</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>María González</h3>
+        <p>"Tenía mucho miedo de manejar, pero los instructores de Genesis fueron muy pacientes y profesionales. Ahora manejo con confianza todos los días al trabajo. ¡Totalmente recomendado!"</p>
+      </div>
+      <div class="card">
+        <h3>Carlos Rodríguez</h3>
+        <p>"Tomé el curso profesional en Genesis y ahora trabajo como conductor de camiones. Los instructores tienen mucha experiencia en el campo y me prepararon muy bien para el examen."</p>
+      </div>
+      <div class="card">
+        <h3>Laura Martínez</h3>
+        <p>"Aprobé el examen de manejo en mi primer intento gracias a Genesis. Las clases prácticas son muy completas y cubren todas las situaciones que puedes encontrar en la calle."</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <div class="contact">
+      <p><strong>Ubicación:</strong> Gerli, Lanús</p>
+      <p><strong>Teléfonos:</strong> 116831375</p>
+      <p><strong>Correo:</strong> genesis.autoescuela82@gmail.com</p>
+      <p><strong>Horario de atención:</strong><br>Lunes a Viernes: 8:00 am - 18:00 pm<br>Sábados: 9:00 am - 15:00 pm</p>
+      <p>Síguenos en redes sociales: Facebook - Instagram - TikTok</p>
+      <a href="#" class="btn-primary">¡Quiero inscribirme!</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <details class="faq-item">
+      <summary>¿Qué necesito para inscribirme al curso?</summary>
+      <p>Únicamente el Nombre y una Dirección.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuánto tiempo dura el proceso completo?</summary>
+      <p>Entre 4 y 6 semanas, según disponibilidad y ritmo de aprendizaje.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Puedo elegir el horario de mis clases prácticas?</summary>
+      <p>Sí, ofrecemos horarios de lunes a sábado; elige el que más te convenga.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué pasa si repruebo el examen práctico?</summary>
+      <p>En el lapso de dos semanas, podes volver a realizarlo.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Los vehículos tienen doble comando?</summary>
+      <p>Sí, todos cuentan con doble comando para tu seguridad.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué sucede si no puedo presentarme a la clase?</summary>
+      <p>Tienes posibilidad de reprogramarla para la semana siguiente.</p>
+    </details>
+  </section>
+
+  <footer style="text-align:center; padding:1rem;">
+    <p>&copy; 2025 GENESIS. Formando conductores responsables desde 2010. Tu seguridad es nuestra prioridad.</p>
+  </footer>
+
+  <script>
+    (function() {
+      const slides = document.querySelector('.slides');
+      const slideCount = document.querySelectorAll('.slide').length;
+      let index = 0;
+      document.getElementById('next').addEventListener('click', () => {
+        index = (index + 1) % slideCount;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      });
+      document.getElementById('prev').addEventListener('click', () => {
+        index = (index - 1 + slideCount) % slideCount;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      });
+    })();
+  </script>
+</body>
+</html>
