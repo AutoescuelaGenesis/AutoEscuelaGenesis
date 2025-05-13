@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Autoescuela Genesis</title>
-  <!-- Font Awesome para iconos -->
-  <link rel="icon" href="assets/genesisf-n.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/genesisf.png">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6OeJ5W+UZ/OdbE8UgQ9eYDCY6/1uEISNf9ueZlHjG0+4QaY+6Ql7R5oz6akW0bL8ygxMVJu3Ug+X7J3vYwW9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Título que aparece en Google y pestaña del navegador -->
+<title>Autoescuela Génesis Lanus - Aprendé a conducir hoy</title>
+
+<!-- Descripción para motores de búsqueda -->
+<meta name="description"
+      content="Autoescuela Génesis en Gerli, Lanús: ¡aprendé a conducir con instructores certificados! Cursos personalizados, prácticas en avenidas y alto índice de aprobación." />
+
+<!-- Palabras clave (opcional hoy en día) -->
+<meta name="keywords"
+      content="autoescuela, conducir, carnet, manejo, clases de manejo, Genesis, autoescuela genesis, autoescuela Lanús, autoescuela Gerli, clases de manejo Lanús, clases de manejo Gerli, licencia de conducir Lanús, Autoescuela Génesis" />
+
+<!-- Autor (opcional) -->
+<meta name="author" content="Autoescuela Génesis" />
+
+<!-- Favicon e íconos -->
+<link rel="icon" href="assets/genesisf-n.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/genesisf.png">
+
+<!-- Tus estilos -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p6OeJ5W+UZ/OdbE8UgQ9eYDCY6/1uEISNf9ueZlHjG0+4QaY+6Ql7R5oz6akW0bL8ygxMVJu3Ug+X7J3vYwW9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
   <style>
     :root {
       --bg-color: #000;
@@ -50,11 +69,24 @@
 </head>
 <body>
   <header>
-    <img src="assets/logo.jpg" alt="Logo Autoescuela Genesis" />
-    <h1>GENESIS</h1>
-    <p class="lead">Mereces lo que sueñas.</p>
-    <p>Aprende a manejar con confianza<br>En Genesis te ofrecemos los mejores instructores y métodos de enseñanza para que obtengas tu licencia de manejo de forma rápida y segura.</p>
-  </header>
+  <img src="assets/logo.jpg" alt="Logo Autoescuela Génesis" />
+
+  <!-- Nuevo título con ciudad -->
+  <h1>Autoescuela Génesis en Gerli, Lanús</h1>
+
+  <!-- Nuevo párrafo descriptivo -->
+  <p>Somos un Autoescuela ubicada en Gerli, Lanús. Ofrecemos cursos de manejo personalizados para obtener tu licencia de manejo de forma rápida y segura.</p>
+
+  <!-- Tu lema original -->
+  <h1>GENESIS</h1>
+  <p class="lead">Mereces lo que sueñas.</p>
+
+  <!-- Subtítulo original -->
+  <p>
+    Aprende a manejar con confianza<br>
+    En Genesis te ofrecemos los mejores instructores y métodos de enseñanza para que obtengas tu licencia de manejo de forma rápida y segura.
+  </p>
+</header>
 
   <div class="links">
     <a href="https://wa.me/5491168313725?text=Hola%20quiero%20informaci%C3%B3n%20por%20favor" class="btn">
@@ -71,14 +103,46 @@
 <div class="slider" id="slider">
   <div class="slides">
     <!-- Imágenes -->
-    <div class="slide"><img src="assets/foto1.jpg" alt="Foto 1"></div>
+     <div class="slide"><img src="assets/foto1.jpg" alt="Foto 1"></div>
+ <div class="slide">
+   <img src="assets/foto1.jpg"
+        alt="Alumno practicando estacionamiento con instructor al lado">
+ </div>
     <div class="slide"><img src="assets/foto2.jpg" alt="Foto 2"></div>
+    <!--
+    <div class="slide">
+  <img src="assets/foto2.jpg"
+       alt="REMPLAZARDESCRIPCION">
+</div>
+    -->
     <div class="slide"><img src="assets/foto3.jpg" alt="Foto 3"></div>
     <!--
+    <div class="slide">
+  <img src="assets/foto3.jpg"
+       alt="REMPLAZARDESCRIPCION">
+</div>
+    -->
+    <!--
     <div class="slide"><img src="assets/foto4.jpg" alt="Foto 4"></div>
+    <div class="slide">
+  <img src="assets/foto4.jpg"
+       alt="REMPLAZARDESCRIPCION">
+</div>
     -->
     <div class="slide"><img src="assets/foto5.jpg" alt="Foto 5"></div>
+    <!--
+    <div class="slide">
+  <img src="assets/foto5.jpg"
+       alt="REMPLAZARDESCRIPCION">
+</div>
+    -->
     <div class="slide"><img src="assets/foto6.jpg" alt="Foto 6"></div>
+    <!--
+    <div class="slide">
+  <img src="assets/foto6.jpg"
+       alt="REMPLAZARDESCRIPCION">
+</div>
+    -->
     <!-- Vídeos -->
     <!--
     <div class="slide"><video src="assets/video1.mp4" controls></video></div>
@@ -202,20 +266,36 @@
     <p>&copy; 2025 GENESIS. Formando conductores responsables desde 2010. Tu seguridad es nuestra prioridad.</p>
   </footer>
 
-  <script>
-    (function() {
-      const slides = document.querySelector('.slides');
-      const slideCount = document.querySelectorAll('.slide').length;
-      let index = 0;
-      document.getElementById('next').addEventListener('click', () => {
-        index = (index + 1) % slideCount;
-        slides.style.transform = `translateX(-${index * 100}%)`;
-      });
-      document.getElementById('prev').addEventListener('click', () => {
-        index = (index - 1 + slideCount) % slideCount;
-        slides.style.transform = `translateX(-${index * 100}%)`;
-      });
-    })();
-  </script>
+<script>
+  (function() {
+    const slides    = document.querySelector('.slides');
+    const slideCount= document.querySelectorAll('.slide').length;
+    let index       = 0;
+    const nextBtn   = document.getElementById('next');
+    const prevBtn   = document.getElementById('prev');
+
+    // Funciones de avance/retroceso
+    function goNext() {
+      index = (index + 1) % slideCount;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function goPrev() {
+      index = (index - 1 + slideCount) % slideCount;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Listeners para los botones
+    nextBtn.addEventListener('click', goNext);
+    prevBtn.addEventListener('click', goPrev);
+
+    // Auto-play cada 5 segundos
+    let autoPlay = setInterval(goNext, 5000);
+
+    // Pausar auto-play al hover y reanudar al mouseout
+    const sliderEl = document.getElementById('slider');
+    sliderEl.addEventListener('mouseover', () => clearInterval(autoPlay));
+    sliderEl.addEventListener('mouseout',  () => autoPlay = setInterval(goNext, 5000));
+  })();
+</script>
 </body>
 </html>
