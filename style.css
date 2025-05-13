@@ -1,48 +1,51 @@
 /* Estilos externos para ajustar tamaño, centrado y adaptabilidad de las diapositivas */
 
+/* ----------------------------------------------
+   SLIDES / CARRUSEL
+   ---------------------------------------------- */
+
 /* Contenedor de cada slide: centra y oculta desbordes */
 .slide {
   display: flex;
-  align-items: center;        /* centra verticalmente */
-  justify-content: center;    /* centra horizontalmente */
-  overflow: hidden;           /* oculta lo que sobrepase */
-  background: #000;           /* fondo oscuro para letterboxing */
+  align-items: center;        /* centra verticalmente el contenido */
+  justify-content: center;    /* centra horizontalmente el contenido */
+  overflow: hidden;           /* oculta lo que sobrepase los bordes */
+  background: #000;           /* fondo negro para que el contenido se vea bien */
 }
 
-/* Ajuste de imágenes y vídeos */
+/* Ajustes para imágenes y videos dentro del slide */
 .slide img,
 .slide video {
-  max-width: 100%;            /* no se saldrá a los lados */
-  max-height: 500px;          /* altura máxima en escritorio */
-  width: auto;                /* mantiene proporción */
-  height: auto;               /* mantiene proporción */
-  object-fit: contain;        /* encaja dentro sin recortar */
+  max-width: 100%;            /* que no se salgan del ancho del contenedor */
+  max-height: 500px;          /* altura máxima en pantallas grandes */
+  width: auto;                /* mantiene la proporción de ancho */
+  height: auto;               /* mantiene la proporción de alto */
+  object-fit: contain;        /* que encaje sin recortar nada */
 }
 
-/* Adaptación para tabletas */
+/* Adaptación para tabletas (pantallas medianas) */
 @media (max-width: 1024px) {
   .slide img,
   .slide video {
-    max-height: 300px;
+    max-height: 300px;        /* reduce la altura máxima */
   }
 }
 
-/* Adaptación para móviles */
+/* Adaptación para móviles (pantallas pequeñas) */
 @media (max-width: 600px) {
   .slide img,
   .slide video {
-    max-height: 450px;
+    max-height: 450px;        /* puede verse un poco más alto en móvil */
   }
 }
 
-/* Opcional: si prefieres un ratio fijo 16:9, descomenta:
+/* OPCIONAL: para usar formato fijo 16:9, descomenta esto
 .slide {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;        /\* 16:9 (9/16 = 0.5625) *\/
+  padding-top: 56.25%;        /* relación 16:9 */
   overflow: hidden;
 }
-
 .slide img,
 .slide video {
   position: absolute;
@@ -51,16 +54,87 @@
   transform: translate(-50%, -50%);
   width: auto;
   height: 100%;
-  object-fit: cover;          /\* recorta para llenar *\/
+  object-fit: cover;          /* recorta y llena */
 }
 */
+
+/* ----------------------------------------------
+   REDES SOCIALES
+   ---------------------------------------------- */
+
+/* Enlaces de redes sociales */
 .redes-sociales a {
-  color: #d4af37; /* Cambiá el color al que vos quieras */
-  text-decoration: none; /* Quita el subrayado si querés */
-  margin: 0 5px; /* Espaciado entre enlaces */
+  color: #d4af37;              /* color dorado */
+  text-decoration: none;       /* sin subrayado */
+  margin: 0 5px;               /* espacio entre íconos */
+  font-weight: bold;           /* letras en negrita */
+}
+
+/* Efecto al pasar el mouse */
+.redes-sociales a:hover {
+  color: #fff;                 /* se vuelve blanco al pasar el cursor */
+}
+
+/* ----------------------------------------------
+   TEXTOS (títulos, párrafos, etc.)
+   Personalización para versión escritorio y móvil
+   ---------------------------------------------- */
+
+/* Tamaño base para textos en ESCRITORIO */
+body {
+  font-size: 16px;             /* puedes cambiar este valor: 18px, 20px, etc. */
+}
+
+/* Títulos principales (h1) */
+h1 {
+  font-size: 2em;              /* por defecto equivale a 32px */
+}
+
+/* Subtítulos (h2) */
+h2 {
+  font-size: 1.5em;
+}
+
+/* Texto general (párrafos, descripciones, etc.) */
+p {
+  font-size: 1em;
+}
+
+/* Ajustes para versión MÓVIL */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;          /* más chico en móviles si querés */
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
+}
+
+/* Texto destacado para llamar la atención con el slogan */
+
+.frase-destacada {
+  font-weight: bold;         /* Negrita */
+  font-size: 1.5rem;         /* Tamaño más grande */
+  color: #d4af37;            /* Dorado, cambialo si querés otro */
+  text-shadow: 1px 1px 2px #000; /* Le da profundidad */
+  text-align: center;
+}
+
+
+/* Texto en dorado para GENESIS */
+.dorado {
+  background: linear-gradient(45deg, #f5d76e, #d4af37, #f5d76e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
-.redes-sociales a:hover {
-  color: #fff; /* Cambia de color al pasar el mouse */
-}
