@@ -82,12 +82,12 @@
 
 /* Tamaño base para textos en ESCRITORIO */
 body {
-  font-size: 16px;             /* puedes cambiar este valor: 18px, 20px, etc. */
+  font-size: 20px;             /* puedes cambiar este valor:16px defecto, 18px, 20px, etc. */
 }
 
 /* Títulos principales (h1) */
 h1 {
-  font-size: 2em;              /* por defecto equivale a 32px */
+  font-size: 2em;              /* 2em por defecto equivale a 32px */
 }
 
 /* Subtítulos (h2) */
