@@ -82,7 +82,7 @@
 
 /* Tamaño base para textos en ESCRITORIO */
 body {
-  font-size: 28px;             /* puedes cambiar este valor:16px defecto, 18px, 20px, etc. */
+  font-size: 22px;             /* puedes cambiar este valor:16px defecto, 18px, 20px, etc. */
 }
 
 /* Títulos principales (h1) */
@@ -120,21 +120,22 @@ p {
 }
 
 /* Texto destacado para llamar la atención con el slogan */
-
+/*
 .frase-destacada {
-  font-weight: bold;         /* Negrita */
-  font-size: 1.5rem;         /* Tamaño más grande */
-  color: #d4af37;            /* Dorado, cambialo si querés otro */
-  text-shadow: 1px 1px 2px #000; /* Le da profundidad */
+  font-weight: bold;         /* Negrita /
+  font-size: 1.5rem;         /* Tamaño más grande /
+  color: #d4af37;            /* Dorado, cambialo si querés otro /
+  text-shadow: 1px 1px 2px #000; /* Le da profundidad /
   text-align: center;
 }
-
+*/
 
 /* Texto en dorado para GENESIS */
+/*
 .dorado {
   background: linear-gradient(45deg, #f5d76e, #d4af37, #f5d76e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
-
+*/
